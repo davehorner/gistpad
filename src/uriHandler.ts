@@ -26,7 +26,7 @@ async function handleFollowRequest(query: URLSearchParams) {
   const user = query.get("user");
   if (user) {
     followUser(user);
-    vscode.commands.executeCommand("workbench.view.extension.gistpad");
+    vscode.commands.executeCommand("workbench.view.extension.davepad");
   }
 }
 
@@ -50,7 +50,7 @@ async function handleScratchRequest() {
     // so that we know whether there's already a
     // scratch gist or not, before opening it.
     await when(() => !store.isLoading);
-    await vscode.commands.executeCommand("gistpad.gists.focus");
+    await vscode.commands.executeCommand("davepad.gists.focus");
     await newScratchNote(false);
   });
 }
@@ -65,7 +65,7 @@ async function handleTodayRequest() {
     );
 
     if (repoStore.wiki) {
-      await vscode.commands.executeCommand("gistpad.repos.focus");
+      await vscode.commands.executeCommand("davepad.repos.focus");
       await vscode.commands.executeCommand(
         `${EXTENSION_NAME}.openTodayPage`,
         null,

@@ -18,8 +18,8 @@ const LINK_PATTERN = /(?:#?\[\[)(?<page>[^\]]+)(?:\]\])|#(?<tag>[^\s]+)/gi;
 const WIKI_REPO_PATTERNS = ["wiki", "notes", "obsidian", "journal"];
 
 const WIKI_WORKSPACE_FILES = [
-  "gistpad.json",
-  ".vscode/gistpad.json",
+  "davepad.json",
+  ".vscode/davepad.json",
   ".vscode/foam.json"
 ];
 

@@ -1,7 +1,7 @@
 import { commands, ExtensionContext } from "vscode";
 
-const HASREPOS_CONTEXT = "gistpad:hasRepos";
-const REPO_KEY = "gistpad.repos";
+const HASREPOS_CONTEXT = "davepad:hasRepos";
+const REPO_KEY = "davepad.repos";
 
 export interface IStorage {
   repos: string[];

@@ -15,7 +15,7 @@ export class RepositoryNode extends TreeItem {
     this.iconPath = new ThemeIcon(iconName);
 
     this.contextValue =
-      "gistpad." + (repo.isSwing ? "swing" : repo.isWiki ? "wiki" : "repo");
+      "davepad." + (repo.isSwing ? "swing" : repo.isWiki ? "wiki" : "repo");
 
     if (repo.isWiki && store.wiki?.name === repo.name) {
       this.description = "Primary";
@@ -63,8 +63,8 @@ export class RepositoryFileNode extends TreeItem {
 
     const repoType = repo.isWiki ? "wiki" : "repo";
     this.contextValue = file.isDirectory
-      ? `gistpad.${repoType}Directory`
-      : "gistpad.repoFile";
+      ? `davepad.${repoType}Directory`
+      : "davepad.repoFile";
   }
 }
 
@@ -92,6 +92,6 @@ export class RepositoryFileBackLinkNode extends TreeItem {
       title: "Open File"
     };
 
-    this.contextValue = "gistpad.repoFile.backLink";
+    this.contextValue = "davepad.repoFile.backLink";
   }
 }

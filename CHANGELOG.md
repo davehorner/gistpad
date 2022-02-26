@@ -14,7 +14,7 @@
 
 ## v0.2.8 (04/07/21)
 
-- Added support for the [GistPad CLI](https://aka.ms/gistpad-cli), so that you can open repos/gists, and launch into a scratch note or today page from your terminal
+- Added support for the [GistPad CLI](https://aka.ms/davepad-cli), so that you can open repos/gists, and launch into a scratch note or today page from your terminal
 
 ## v0.2.7 (03/29/21)
 
@@ -69,8 +69,8 @@
 - Your list of opened repos, followed users and playground tutorials are now synchronized between machines, if you're using VS Code's settings sync.
 - The `Repos` tree now displays the file count (for directories) and backlink count (for wiki files) as inline node descriptions.
 - The `delete_repo` authentication scope is no longer requested by default.
-- The `gistpad.playgrounds.autoSave` setting is now defaulted to `false`.
-- Removed the `gistpad.gitSSO` setting, since it's no longer used.
+- The `davepad.playgrounds.autoSave` setting is now defaulted to `false`.
+- Removed the `davepad.gitSSO` setting, since it's no longer used.
 
 ## v0.1.11 (11/26/2020)
 
@@ -133,7 +133,7 @@
 - Renaming and deleting repo files now correctly updates any opened editors
 - The new file is automatically opened when duplicating a file
 - Editor windows are automatically closed when unmanaging the repo they're associated with
-- Updated the `gistpad.gitSSO` setting to be `false` by default, due to some issues that some users were running into
+- Updated the `davepad.gitSSO` setting to be `false` by default, due to some issues that some users were running into
 
 ## v0.1.2 (06/17/2020)
 
@@ -157,7 +157,7 @@
 
 ## v0.0.67 (05/01/2020)
 
-- Added support for extensions to contribute custom markup languages for playgrounds, which supports the new [`GistPad Contrib` extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.gistpad-contrib).
+- Added support for extensions to contribute custom markup languages for playgrounds, which supports the new [`GistPad Contrib` extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.davepad-contrib).
 - Introduced a new "welcome view" to the `GistPad` tree, which should improve new user onboarding.
 
 ## v0.0.66 (04/10/2020)
@@ -477,7 +477,7 @@
 ## v0.0.16 (12/11/2019)
 
 - Added a new `Clone Repository` context menu to gists, that allows you to clone a gist's repository locally
-- Introduced a new `gistpad.apiUrl` setting, which allows users to use GitHub Enterprise servers
+- Introduced a new `davepad.apiUrl` setting, which allows users to use GitHub Enterprise servers
 
 ## v0.0.15 (12/08/2019)
 

@@ -1,5 +1,5 @@
 {
-  "name": "gistfs",
+  "name": "gistdave",
   "displayName": "GistPad",
   "description": "Manage your code snippets and developer notes using GitHub Gists and repositories.",
   "publisher": "vsls-contrib",
@@ -11,12 +11,12 @@
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lostintangent/gistpad"
+    "url": "https://github.com/lostintangent/davepad"
   },
   "bugs": {
-    "url": "https://github.com/lostintangent/gistpad/issues"
+    "url": "https://github.com/lostintangent/davepad/issues"
   },
-  "homepage": "https://github.com/lostintangent/gistpad#readme",
+  "homepage": "https://github.com/lostintangent/davepad#readme",
   "license": "MIT",
   "engines": {
     "vscode": "^1.48.0"
@@ -43,12 +43,12 @@
       "type": "object",
       "title": "GistPad",
       "properties": {
-        "gistpad.treeIcons": {
+        "davepad.treeIcons": {
           "default": "true",
           "type": "boolean",
           "description": "Specifies whether to show the gist type icons in the gists tree."
         },
-        "gistpad.comments.showThread": {
+        "davepad.comments.showThread": {
           "default": "whenNotEmpty",
           "type": "string",
           "enum": [
@@ -58,12 +58,12 @@
           ],
           "description": "Specifies when to display the comment thread when you open a Gist file."
         },
-        "gistpad.images.directoryName": {
+        "davepad.images.directoryName": {
           "default": "images",
           "type": "string",
           "description": "Specifies the name of the directory that pasted images are uploaded to."
         },
-        "gistpad.images.markdownPasteFormat": {
+        "davepad.images.markdownPasteFormat": {
           "default": "markdown",
           "enum": [
             "html",
@@ -71,7 +71,7 @@
           ],
           "description": "Specifies the markup format to use when pasting an image into a markdown gist file."
         },
-        "gistpad.images.pasteType": {
+        "davepad.images.pasteType": {
           "default": "file",
           "enum": [
             "base64",
@@ -79,37 +79,37 @@
           ],
           "description": "Specifies the upload method to use when pasting an image into a gist file."
         },
-        "gistpad.scratchNotes.directoryFormat": {
+        "davepad.scratchNotes.directoryFormat": {
           "default": "",
           "type": "string",
           "description": "Specifies the moment.js format string to use when generating new scratch notes."
         },
-        "gistpad.scratchNotes.fileFormat": {
+        "davepad.scratchNotes.fileFormat": {
           "default": "LL",
           "type": "string",
           "description": "Specifies the moment.js format string to use when generating new scratch notes."
         },
-        "gistpad.scratchNotes.fileExtension": {
+        "davepad.scratchNotes.fileExtension": {
           "default": ".md",
           "type": "string",
           "description": "Specifies the file extension to use when generating new scratch notes."
         },
-        "gistpad.scratchNotes.show": {
+        "davepad.scratchNotes.show": {
           "default": true,
           "type": "boolean",
           "description": "Specifies whether or not to display the scratch notes node in the gists tree view."
         },
-        "gistpad.showcaseUrl": {
-          "default": "https://aka.ms/gistpad-showcase",
+        "davepad.showcaseUrl": {
+          "default": "https://aka.ms/davepad-showcase",
           "type": "string",
           "description": "Specifies the URL of the showcase to display gists from."
         },
-        "gistpad.wikis.daily.directoryName": {
+        "davepad.wikis.daily.directoryName": {
           "default": "Daily",
           "type": "string",
           "description": "Specifies the name of the directory that daily pages are organized within."
         },
-        "gistpad.wikis.daily.titleFormat": {
+        "davepad.wikis.daily.titleFormat": {
           "default": "LL",
           "type": "string",
           "description": "Specifies the date format (using Moment.js syntax) that is used to for the title of daily pages."
@@ -118,354 +118,354 @@
     },
     "commands": [
       {
-        "command": "gistpad.addDirectoryFile",
+        "command": "davepad.addDirectoryFile",
         "title": "Add New File(s)"
       },
       {
-        "command": "gistpad.addFile",
+        "command": "davepad.addFile",
         "title": "Add New File(s)"
       },
       {
-        "command": "gistpad.addFileToGist",
+        "command": "davepad.addFileToGist",
         "title": "Copy File to Gist",
         "icon": "$(github)"
       },
       {
-        "command": "gistpad.addGistComment",
+        "command": "davepad.addGistComment",
         "title": "Add Comment",
         "enablement": "!commentIsEmpty"
       },
       {
-        "command": "gistpad.addRepositoryComment",
+        "command": "davepad.addRepositoryComment",
         "title": "Add Comment",
         "enablement": "!commentIsEmpty"
       },
       {
-        "command": "gistpad.addRepositoryFile",
+        "command": "davepad.addRepositoryFile",
         "title": "Add New File",
         "icon": "$(add)"
       },
       {
-        "command": "gistpad.addSelectionToGist",
+        "command": "davepad.addSelectionToGist",
         "title": "Add Selection to Gist",
         "enablement": "editorHasSelection"
       },
       {
-        "command": "gistpad.addWikiPage",
+        "command": "davepad.addWikiPage",
         "title": "Add Wiki Page",
         "category": "GistPad",
         "icon": "$(add)"
       },
       {
-        "command": "gistpad.changeGistDescription",
+        "command": "davepad.changeGistDescription",
         "title": "Change Description"
       },
       {
-        "command": "gistpad.clearScratchNotes",
+        "command": "davepad.clearScratchNotes",
         "title": "Clear Scratch Notes"
       },
       {
-        "command": "gistpad.cloneManagedRepository",
+        "command": "davepad.cloneManagedRepository",
         "title": "Clone Repository"
       },
       {
-        "command": "gistpad.cloneRepository",
+        "command": "davepad.cloneRepository",
         "title": "Clone Repository"
       },
       {
-        "command": "gistpad.copyFileContents",
+        "command": "davepad.copyFileContents",
         "title": "Copy File Contents"
       },
       {
-        "command": "gistpad.copyFileUrl",
+        "command": "davepad.copyFileUrl",
         "title": "Copy GitHub URL"
       },
       {
-        "command": "gistpad.copyGistPadUrl",
+        "command": "davepad.copyGistPadUrl",
         "title": "Copy GistPad URL"
       },
       {
-        "command": "gistpad.copyGistUrl",
+        "command": "davepad.copyGistUrl",
         "title": "Copy GitHub URL"
       },
       {
-        "command": "gistpad.copyRepositoryFileUrl",
+        "command": "davepad.copyRepositoryFileUrl",
         "title": "Copy GitHub URL"
       },
       {
-        "command": "gistpad.copyRepositoryUrl",
+        "command": "davepad.copyRepositoryUrl",
         "title": "Copy Repository URL"
       },
       {
-        "command": "gistpad.deleteDirectory",
+        "command": "davepad.deleteDirectory",
         "title": "Delete Directory"
       },
       {
-        "command": "gistpad.deleteFile",
+        "command": "davepad.deleteFile",
         "title": "Delete File"
       },
       {
-        "command": "gistpad.deleteGist",
+        "command": "davepad.deleteGist",
         "title": "Delete Gist",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.deleteGistComment",
+        "command": "davepad.deleteGistComment",
         "title": "Delete Comment"
       },
       {
-        "command": "gistpad.deleteRepositoryBranch",
+        "command": "davepad.deleteRepositoryBranch",
         "title": "Delete Branch"
       },
       {
-        "command": "gistpad.deleteRepositoryComment",
+        "command": "davepad.deleteRepositoryComment",
         "title": "Delete Comment"
       },
       {
-        "command": "gistpad.deleteRepositoryDirectory",
+        "command": "davepad.deleteRepositoryDirectory",
         "title": "Delete Directory"
       },
       {
-        "command": "gistpad.deleteRepositoryFile",
+        "command": "davepad.deleteRepositoryFile",
         "title": "Delete File"
       },
       {
-        "command": "gistpad.deleteRepository",
+        "command": "davepad.deleteRepository",
         "title": "Delete Repository"
       },
       {
-        "command": "gistpad.duplicateRepositoryFile",
+        "command": "davepad.duplicateRepositoryFile",
         "title": "Duplicate File"
       },
       {
-        "command": "gistpad.duplicateDirectory",
+        "command": "davepad.duplicateDirectory",
         "title": "Duplicate Directory"
       },
       {
-        "command": "gistpad.duplicateFile",
+        "command": "davepad.duplicateFile",
         "title": "Duplicate File"
       },
       {
-        "command": "gistpad.duplicateGist",
+        "command": "davepad.duplicateGist",
         "title": "Duplicate Gist"
       },
       {
-        "command": "gistpad.editGistComment",
+        "command": "davepad.editGistComment",
         "title": "Edit Comment"
       },
       {
-        "command": "gistpad.editRepositoryComment",
+        "command": "davepad.editRepositoryComment",
         "title": "Edit Comment"
       },
       {
-        "command": "gistpad.openRepository",
+        "command": "davepad.openRepository",
         "title": "Open Repository",
         "category": "GistPad",
         "icon": "$(add)"
       },
       {
-        "command": "gistpad.exportGistToCodePen",
+        "command": "davepad.exportGistToCodePen",
         "title": "Export to CodePen"
       },
       {
-        "command": "gistpad.exportToRepo",
+        "command": "davepad.exportToRepo",
         "title": "Export to Repository"
       },
       {
-        "command": "gistpad.exportTour",
+        "command": "davepad.exportTour",
         "title": "Export Tour to Gist..."
       },
       {
-        "command": "gistpad.followUser",
+        "command": "davepad.followUser",
         "title": "Follow User",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.forkGist",
+        "command": "davepad.forkGist",
         "title": "Fork Gist",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.hideScratchNotes",
+        "command": "davepad.hideScratchNotes",
         "title": "Hide Scratch Notes",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.mergeRepositoryBranch",
+        "command": "davepad.mergeRepositoryBranch",
         "title": "Merge Branch"
       },
       {
-        "command": "gistpad.newGistLog",
+        "command": "davepad.newGistLog",
         "title": "New GistLog",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.newSwing",
+        "command": "davepad.newSwing",
         "title": "New CodeSwing",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.newScratchNote",
+        "command": "davepad.newScratchNote",
         "title": "New Scratch Note",
         "category": "GistPad",
         "icon": "$(add)"
       },
       {
-        "command": "gistpad.newSecretSwing",
+        "command": "davepad.newSecretSwing",
         "title": "New Secret CodeSwing",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.newPublicGist",
+        "command": "davepad.newPublicGist",
         "title": "New Gist",
         "category": "GistPad",
         "icon": "$(add)"
       },
       {
-        "command": "gistpad.newSecretGist",
+        "command": "davepad.newSecretGist",
         "title": "New Secret Gist",
         "category": "GistPad",
         "icon": "$(gist-secret)"
       },
       {
-        "command": "gistpad.openGist",
+        "command": "davepad.openGist",
         "title": "Open Gist",
         "category": "GistPad",
         "icon": "$(go-to-file)"
       },
       {
-        "command": "gistpad.openGistFile",
+        "command": "davepad.openGistFile",
         "title": "Open Gist File"
       },
       {
-        "command": "gistpad.openGistLogFeed",
+        "command": "davepad.openGistLogFeed",
         "title": "View Feed in GistLog"
       },
       {
-        "command": "gistpad.openGistInBrowser",
+        "command": "davepad.openGistInBrowser",
         "title": "View Gist in GitHub"
       },
       {
-        "command": "gistpad.openGistInBlocks",
+        "command": "davepad.openGistInBlocks",
         "title": "View Gist in Bl.ocks"
       },
       {
-        "command": "gistpad.openGistInGistLog",
+        "command": "davepad.openGistInGistLog",
         "title": "View Gist in GistLog"
       },
       {
-        "command": "gistpad.openGistInNbViewer",
+        "command": "davepad.openGistInNbViewer",
         "title": "View Gist in NbViewer"
       },
       {
-        "command": "gistpad.openGistWorkspace",
+        "command": "davepad.openGistWorkspace",
         "title": "Open Gist as Workspace",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.openGistNewWindow",
+        "command": "davepad.openGistNewWindow",
         "title": "Open Gist in New Window",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.openProfile",
+        "command": "davepad.openProfile",
         "title": "View Profile in GitHub"
       },
       {
-        "command": "gistpad.openRepositorySwing",
+        "command": "davepad.openRepositorySwing",
         "title": "Open CodeSwing",
         "icon": "$(folder-opened)"
       },
       {
-        "command": "gistpad.openRepositoryFileInBrowser",
+        "command": "davepad.openRepositoryFileInBrowser",
         "title": "View File in GitHub"
       },
       {
-        "command": "gistpad.openRepositoryInBrowser",
+        "command": "davepad.openRepositoryInBrowser",
         "title": "View Repository in GitHub"
       },
       {
-        "command": "gistpad.openTodayPage",
+        "command": "davepad.openTodayPage",
         "title": "Open Today Page",
         "category": "GistPad",
         "icon": "$(calendar)"
       },
       {
-        "command": "gistpad.pasteGistFile",
+        "command": "davepad.pasteGistFile",
         "title": "Paste Gist File",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.pasteImage",
+        "command": "davepad.pasteImage",
         "title": "Paste Image"
       },
       {
-        "command": "gistpad.recordRepoCodeTour",
+        "command": "davepad.recordRepoCodeTour",
         "title": "Record CodeTour"
       },
       {
-        "command": "gistpad.refreshGists",
+        "command": "davepad.refreshGists",
         "title": "Refresh Gists",
         "category": "GistPad",
         "icon": "$(refresh)"
       },
       {
-        "command": "gistpad.refreshRepositories",
+        "command": "davepad.refreshRepositories",
         "title": "Refresh Repositories",
         "category": "GistPad",
         "icon": "$(refresh)"
       },
       {
-        "command": "gistpad.refreshShowcase",
+        "command": "davepad.refreshShowcase",
         "title": "Refresh Showcase",
         "icon": "$(refresh)"
       },
       {
-        "command": "gistpad.renameDirectory",
+        "command": "davepad.renameDirectory",
         "title": "Rename Directory"
       },
       {
-        "command": "gistpad.renameFile",
+        "command": "davepad.renameFile",
         "title": "Rename File"
       },
       {
-        "command": "gistpad.renameRepositoryDirectory",
+        "command": "davepad.renameRepositoryDirectory",
         "title": "Rename Directory"
       },
       {
-        "command": "gistpad.renameRepositoryFile",
+        "command": "davepad.renameRepositoryFile",
         "title": "Rename File"
       },
       {
-        "command": "gistpad.replyGistComment",
+        "command": "davepad.replyGistComment",
         "title": "Reply",
         "enablement": "!commentIsEmpty"
       },
       {
-        "command": "gistpad.saveGistComment",
+        "command": "davepad.saveGistComment",
         "title": "Save"
       },
       {
-        "command": "gistpad.saveRepositoryComment",
+        "command": "davepad.saveRepositoryComment",
         "title": "Save"
       },
       {
-        "command": "gistpad.signIn",
+        "command": "davepad.signIn",
         "title": "Sign In",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.groupGists",
+        "command": "davepad.groupGists",
         "title": "Group Gists",
         "icon": "$(group-by-ref-type)"
       },
       {
-        "command": "gistpad.ungroupGists",
+        "command": "davepad.ungroupGists",
         "title": "Ungroup Gists",
         "icon": "$(ungroup-by-ref-type)"
       },
       {
-        "command": "gistpad.sortGistsAlphabetically",
+        "command": "davepad.sortGistsAlphabetically",
         "title": "Sort Gists Alphabetically",
         "icon": {
           "dark": "images/dark/sort-alphabetical.svg",
@@ -473,7 +473,7 @@
         }
       },
       {
-        "command": "gistpad.sortGistsByUpdatedTime",
+        "command": "davepad.sortGistsByUpdatedTime",
         "title": "Sort Gists by Updated Time",
         "icon": {
           "dark": "images/dark/sort-time.svg",
@@ -481,991 +481,991 @@
         }
       },
       {
-        "command": "gistpad.starGist",
+        "command": "davepad.starGist",
         "title": "Star Gist"
       },
       {
-        "command": "gistpad.starredGists",
+        "command": "davepad.starredGists",
         "title": "Starred Gists",
         "category": "GistPad"
       },
       {
-        "command": "gistpad.startRepoCodeTour",
+        "command": "davepad.startRepoCodeTour",
         "title": "Start CodeTour"
       },
       {
-        "command": "gistpad.submitShowcaseEntry",
+        "command": "davepad.submitShowcaseEntry",
         "title": "Submit Entry",
         "icon": "$(megaphone)"
       },
       {
-        "command": "gistpad.switchRepositoryBranch",
+        "command": "davepad.switchRepositoryBranch",
         "title": "Switch Branch"
       },
       {
-        "command": "gistpad.closeRepository",
+        "command": "davepad.closeRepository",
         "title": "Close Repository"
       },
       {
-        "command": "gistpad.unfollowUser",
+        "command": "davepad.unfollowUser",
         "title": "Unfollow User"
       },
       {
-        "command": "gistpad.unstarGist",
+        "command": "davepad.unstarGist",
         "title": "Unstar Gist"
       },
       {
-        "command": "gistpad.uploadFileToDirectory",
+        "command": "davepad.uploadFileToDirectory",
         "title": "Upload File(s)"
       },
       {
-        "command": "gistpad.uploadFileToGist",
+        "command": "davepad.uploadFileToGist",
         "title": "Upload File(s)"
       },
       {
-        "command": "gistpad.uploadRepositoryFile",
+        "command": "davepad.uploadRepositoryFile",
         "title": "Upload File(s)"
       },
       {
-        "command": "gistpad.viewForks",
+        "command": "davepad.viewForks",
         "title": "View Forks"
       }
     ],
     "menus": {
       "commandPalette": [
         {
-          "command": "gistpad.deleteGist",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.deleteGist",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.openRepository",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.openRepository",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.followUser",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.followUser",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.forkGist",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.forkGist",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.signIn",
-          "when": "gistpad:state != SignedIn"
+          "command": "davepad.signIn",
+          "when": "davepad:state != SignedIn"
         },
         {
-          "command": "gistpad.newGistLog",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.newGistLog",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.newSwing",
-          "when": "gistpad:state == SignedIn && gistpad:codeSwingEnabled"
+          "command": "davepad.newSwing",
+          "when": "davepad:state == SignedIn && davepad:codeSwingEnabled"
         },
         {
-          "command": "gistpad.newPublicGist",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.newPublicGist",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.newSecretGist",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.newSecretGist",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.newScratchNote",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.newScratchNote",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.newSecretSwing",
-          "when": "gistpad:state == SignedIn && gistpad:codeSwingEnabled"
+          "command": "davepad.newSecretSwing",
+          "when": "davepad:state == SignedIn && davepad:codeSwingEnabled"
         },
         {
-          "command": "gistpad.refreshGists",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.refreshGists",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.refreshRepositories",
-          "when": "gistpad:hasRepos"
+          "command": "davepad.refreshRepositories",
+          "when": "davepad:hasRepos"
         },
         {
-          "command": "gistpad.starredGists",
-          "when": "gistpad:state == SignedIn"
+          "command": "davepad.starredGists",
+          "when": "davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.pasteGistFile",
+          "command": "davepad.pasteGistFile",
           "when": "editorTextFocus"
         },
         {
-          "command": "gistpad.addDirectoryFile",
+          "command": "davepad.addDirectoryFile",
           "when": "false"
         },
         {
-          "command": "gistpad.addFile",
+          "command": "davepad.addFile",
           "when": "false"
         },
         {
-          "command": "gistpad.addFileToGist",
+          "command": "davepad.addFileToGist",
           "when": "false"
         },
         {
-          "command": "gistpad.addGistComment",
+          "command": "davepad.addGistComment",
           "when": "false"
         },
         {
-          "command": "gistpad.addRepositoryComment",
+          "command": "davepad.addRepositoryComment",
           "when": "false"
         },
         {
-          "command": "gistpad.addRepositoryFile",
+          "command": "davepad.addRepositoryFile",
           "when": "false"
         },
         {
-          "command": "gistpad.addSelectionToGist",
+          "command": "davepad.addSelectionToGist",
           "when": "false"
         },
         {
-          "command": "gistpad.addWikiPage",
-          "when": "gistpad:state == SignIn && gistpad:hasWiki"
+          "command": "davepad.addWikiPage",
+          "when": "davepad:state == SignIn && davepad:hasWiki"
         },
         {
-          "command": "gistpad.changeGistDescription",
+          "command": "davepad.changeGistDescription",
           "when": "false"
         },
         {
-          "command": "gistpad.clearScratchNotes",
+          "command": "davepad.clearScratchNotes",
           "when": "false"
         },
         {
-          "command": "gistpad.cloneManagedRepository",
+          "command": "davepad.cloneManagedRepository",
           "when": "false"
         },
         {
-          "command": "gistpad.cloneRepository",
+          "command": "davepad.cloneRepository",
           "when": "false"
         },
         {
-          "command": "gistpad.copyGistPadUrl",
+          "command": "davepad.copyGistPadUrl",
           "when": "false"
         },
         {
-          "command": "gistpad.copyGistUrl",
+          "command": "davepad.copyGistUrl",
           "when": "false"
         },
         {
-          "command": "gistpad.copyRepositoryFileUrl",
+          "command": "davepad.copyRepositoryFileUrl",
           "when": "false"
         },
         {
-          "command": "gistpad.copyRepositoryUrl",
+          "command": "davepad.copyRepositoryUrl",
           "when": "false"
         },
         {
-          "command": "gistpad.copyFileContents",
+          "command": "davepad.copyFileContents",
           "when": "false"
         },
         {
-          "command": "gistpad.copyFileUrl",
+          "command": "davepad.copyFileUrl",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteDirectory",
+          "command": "davepad.deleteDirectory",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteFile",
+          "command": "davepad.deleteFile",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteGistComment",
+          "command": "davepad.deleteGistComment",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteRepository",
+          "command": "davepad.deleteRepository",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteRepositoryBranch",
+          "command": "davepad.deleteRepositoryBranch",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteRepositoryComment",
+          "command": "davepad.deleteRepositoryComment",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteRepositoryDirectory",
+          "command": "davepad.deleteRepositoryDirectory",
           "when": "false"
         },
         {
-          "command": "gistpad.deleteRepositoryFile",
+          "command": "davepad.deleteRepositoryFile",
           "when": "false"
         },
         {
-          "command": "gistpad.duplicateRepositoryFile",
+          "command": "davepad.duplicateRepositoryFile",
           "when": "false"
         },
         {
-          "command": "gistpad.duplicateFile",
+          "command": "davepad.duplicateFile",
           "when": "false"
         },
         {
-          "command": "gistpad.duplicateDirectory",
+          "command": "davepad.duplicateDirectory",
           "when": "false"
         },
         {
-          "command": "gistpad.duplicateGist",
+          "command": "davepad.duplicateGist",
           "when": "false"
         },
         {
-          "command": "gistpad.editGistComment",
+          "command": "davepad.editGistComment",
           "when": "false"
         },
         {
-          "command": "gistpad.editRepositoryComment",
+          "command": "davepad.editRepositoryComment",
           "when": "false"
         },
         {
-          "command": "gistpad.exportGistToCodePen",
+          "command": "davepad.exportGistToCodePen",
           "when": "false"
         },
         {
-          "command": "gistpad.exportToRepo",
+          "command": "davepad.exportToRepo",
           "when": "false"
         },
         {
-          "command": "gistpad.exportTour",
+          "command": "davepad.exportTour",
           "when": "false"
         },
         {
-          "command": "gistpad.groupGists",
+          "command": "davepad.groupGists",
           "when": "false"
         },
         {
-          "command": "gistpad.hideScratchNotes",
+          "command": "davepad.hideScratchNotes",
           "when": "false"
         },
         {
-          "command": "gistpad.mergeRepositoryBranch",
+          "command": "davepad.mergeRepositoryBranch",
           "when": "false"
         },
         {
-          "command": "gistpad.recordRepoCodeTour",
+          "command": "davepad.recordRepoCodeTour",
           "when": "false"
         },
         {
-          "command": "gistpad.refreshShowcase",
+          "command": "davepad.refreshShowcase",
           "when": "false"
         },
         {
-          "command": "gistpad.starGist",
+          "command": "davepad.starGist",
           "when": "false"
         },
         {
-          "command": "gistpad.startRepoCodeTour",
+          "command": "davepad.startRepoCodeTour",
           "when": "false"
         },
         {
-          "command": "gistpad.openGistFile",
+          "command": "davepad.openGistFile",
           "when": "false"
         },
         {
-          "command": "gistpad.openGistInBlocks",
+          "command": "davepad.openGistInBlocks",
           "when": "false"
         },
         {
-          "command": "gistpad.openGistInBrowser",
+          "command": "davepad.openGistInBrowser",
           "when": "false"
         },
         {
-          "command": "gistpad.openGistLogFeed",
+          "command": "davepad.openGistLogFeed",
           "when": "false"
         },
         {
-          "command": "gistpad.openGistInNbViewer",
+          "command": "davepad.openGistInNbViewer",
           "when": "false"
         },
         {
-          "command": "gistpad.openGistInGistLog",
+          "command": "davepad.openGistInGistLog",
           "when": "false"
         },
         {
-          "command": "gistpad.openProfile",
+          "command": "davepad.openProfile",
           "when": "false"
         },
         {
-          "command": "gistpad.openRepositoryFileInBrowser",
+          "command": "davepad.openRepositoryFileInBrowser",
           "when": "false"
         },
         {
-          "command": "gistpad.openRepositorySwing",
+          "command": "davepad.openRepositorySwing",
           "when": "false"
         },
         {
-          "command": "gistpad.openRepositoryInBrowser",
+          "command": "davepad.openRepositoryInBrowser",
           "when": "false"
         },
         {
-          "command": "gistpad.openTodayPage",
-          "when": "gistpad:state == SignIn && gistpad:hasWiki"
+          "command": "davepad.openTodayPage",
+          "when": "davepad:state == SignIn && davepad:hasWiki"
         },
         {
-          "command": "gistpad.pasteImage",
+          "command": "davepad.pasteImage",
           "when": "false"
         },
         {
-          "command": "gistpad.renameDirectory",
+          "command": "davepad.renameDirectory",
           "when": "false"
         },
         {
-          "command": "gistpad.renameFile",
+          "command": "davepad.renameFile",
           "when": "false"
         },
         {
-          "command": "gistpad.renameRepositoryDirectory",
+          "command": "davepad.renameRepositoryDirectory",
           "when": "false"
         },
         {
-          "command": "gistpad.renameRepositoryFile",
+          "command": "davepad.renameRepositoryFile",
           "when": "false"
         },
         {
-          "command": "gistpad.saveGistComment",
+          "command": "davepad.saveGistComment",
           "when": "false"
         },
         {
-          "command": "gistpad.saveRepositoryComment",
+          "command": "davepad.saveRepositoryComment",
           "when": "false"
         },
         {
-          "command": "gistpad.sortGistsAlphabetically",
+          "command": "davepad.sortGistsAlphabetically",
           "when": "false"
         },
         {
-          "command": "gistpad.sortGistsByUpdatedTime",
+          "command": "davepad.sortGistsByUpdatedTime",
           "when": "false"
         },
         {
-          "command": "gistpad.submitShowcaseEntry",
+          "command": "davepad.submitShowcaseEntry",
           "when": "false"
         },
         {
-          "command": "gistpad.switchRepositoryBranch",
+          "command": "davepad.switchRepositoryBranch",
           "when": "false"
         },
         {
-          "command": "gistpad.unfollowUser",
+          "command": "davepad.unfollowUser",
           "when": "false"
         },
         {
-          "command": "gistpad.ungroupGists",
+          "command": "davepad.ungroupGists",
           "when": "false"
         },
         {
-          "command": "gistpad.closeRepository",
+          "command": "davepad.closeRepository",
           "when": "false"
         },
         {
-          "command": "gistpad.unstarGist",
+          "command": "davepad.unstarGist",
           "when": "false"
         },
         {
-          "command": "gistpad.uploadFileToDirectory",
+          "command": "davepad.uploadFileToDirectory",
           "when": "false"
         },
         {
-          "command": "gistpad.uploadFileToGist",
+          "command": "davepad.uploadFileToGist",
           "when": "false"
         },
         {
-          "command": "gistpad.uploadRepositoryFile",
+          "command": "davepad.uploadRepositoryFile",
           "when": "false"
         },
         {
-          "command": "gistpad.viewForks",
+          "command": "davepad.viewForks",
           "when": "false"
         }
       ],
       "view/title": [
         {
-          "command": "gistpad.newPublicGist",
-          "when": "view =~ /^gistpad.gists(.explorer)?$/ && gistpad:state == SignedIn",
+          "command": "davepad.newPublicGist",
+          "when": "view =~ /^davepad.gists(.explorer)?$/ && davepad:state == SignedIn",
           "group": "navigation@1"
         },
         {
-          "command": "gistpad.newSecretGist",
-          "when": "view =~ /^gistpad.gists(.explorer)?$/ && gistpad:state == SignedIn",
+          "command": "davepad.newSecretGist",
+          "when": "view =~ /^davepad.gists(.explorer)?$/ && davepad:state == SignedIn",
           "group": "navigation@2"
         },
         {
-          "command": "gistpad.sortGistsAlphabetically",
-          "when": "view =~ /^gistpad.gists(.explorer)?$/ && gistpad:state == SignedIn && gistpad:sortOrder == updatedTime",
+          "command": "davepad.sortGistsAlphabetically",
+          "when": "view =~ /^davepad.gists(.explorer)?$/ && davepad:state == SignedIn && davepad:sortOrder == updatedTime",
           "group": "navigation@3"
         },
         {
-          "command": "gistpad.sortGistsByUpdatedTime",
-          "when": "view =~ /^gistpad.gists(.explorer)?$/ && gistpad:state == SignedIn && gistpad:sortOrder == alphabetical",
+          "command": "davepad.sortGistsByUpdatedTime",
+          "when": "view =~ /^davepad.gists(.explorer)?$/ && davepad:state == SignedIn && davepad:sortOrder == alphabetical",
           "group": "navigation@3"
         },
         {
-          "command": "gistpad.groupGists",
-          "when": "view =~ /^gistpad.gists(.explorer)?$/ && gistpad:state == SignedIn && gistpad:groupType == none",
+          "command": "davepad.groupGists",
+          "when": "view =~ /^davepad.gists(.explorer)?$/ && davepad:state == SignedIn && davepad:groupType == none",
           "group": "navigation@4"
         },
         {
-          "command": "gistpad.ungroupGists",
-          "when": "view =~ /^gistpad.gists(.explorer)?$/ && gistpad:state == SignedIn && gistpad:groupType != none",
+          "command": "davepad.ungroupGists",
+          "when": "view =~ /^davepad.gists(.explorer)?$/ && davepad:state == SignedIn && davepad:groupType != none",
           "group": "navigation@4"
         },
         {
-          "command": "gistpad.refreshGists",
-          "when": "view =~ /^gistpad.gists(.explorer)?$/ && gistpad:state == SignedIn",
+          "command": "davepad.refreshGists",
+          "when": "view =~ /^davepad.gists(.explorer)?$/ && davepad:state == SignedIn",
           "group": "navigation@5"
         },
         {
-          "command": "gistpad.openRepository",
-          "when": "view == gistpad.repos",
+          "command": "davepad.openRepository",
+          "when": "view == davepad.repos",
           "group": "navigation@1"
         },
         {
-          "command": "gistpad.refreshRepositories",
-          "when": "view == gistpad.repos && gistpad:state == SignedIn",
+          "command": "davepad.refreshRepositories",
+          "when": "view == davepad.repos && davepad:state == SignedIn",
           "group": "navigation@2"
         },
         {
-          "command": "gistpad.submitShowcaseEntry",
-          "when": "view == gistpad.showcase",
+          "command": "davepad.submitShowcaseEntry",
+          "when": "view == davepad.showcase",
           "group": "navigation@1"
         },
         {
-          "command": "gistpad.refreshShowcase",
-          "when": "view == gistpad.showcase",
+          "command": "davepad.refreshShowcase",
+          "when": "view == davepad.showcase",
           "group": "navigation@2"
         }
       ],
       "view/item/context": [
         {
-          "command": "gistpad.newPublicGist",
+          "command": "davepad.newPublicGist",
           "when": "viewItem == gists",
           "group": "inline@1"
         },
         {
-          "command": "gistpad.newSecretGist",
+          "command": "davepad.newSecretGist",
           "when": "viewItem == gists",
           "group": "inline@2"
         },
         {
-          "command": "gistpad.newPublicGist",
+          "command": "davepad.newPublicGist",
           "when": "viewItem == gists",
           "group": "new@1"
         },
         {
-          "command": "gistpad.newSecretGist",
+          "command": "davepad.newSecretGist",
           "when": "viewItem == gists",
           "group": "new@2"
         },
         {
-          "command": "gistpad.newSwing",
-          "when": "viewItem == gists && gistpad:codeSwingEnabled",
+          "command": "davepad.newSwing",
+          "when": "viewItem == gists && davepad:codeSwingEnabled",
           "group": "newAdvanced@1"
         },
         {
-          "command": "gistpad.newSecretSwing",
-          "when": "viewItem == gists && gistpad:codeSwingEnabled",
+          "command": "davepad.newSecretSwing",
+          "when": "viewItem == gists && davepad:codeSwingEnabled",
           "group": "newAdvanced@2"
         },
         {
-          "command": "gistpad.openGist",
+          "command": "davepad.openGist",
           "when": "viewItem == gists",
           "group": "open@1"
         },
         {
-          "command": "gistpad.openProfile",
+          "command": "davepad.openProfile",
           "when": "viewItem == gists || viewItem == followedUserGists",
           "group": "open@2"
         },
         {
-          "command": "gistpad.openGistLogFeed",
+          "command": "davepad.openGistLogFeed",
           "when": "viewItem == gists",
           "group": "open@3"
         },
         {
-          "command": "gistpad.openGist",
+          "command": "davepad.openGist",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "inline@1"
         },
         {
-          "command": "gistpad.openGist",
+          "command": "davepad.openGist",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "base@1"
         },
         {
-          "command": "gistpad.openGistWorkspace",
+          "command": "davepad.openGistWorkspace",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "base@2"
         },
         {
-          "command": "gistpad.openGistNewWindow",
+          "command": "davepad.openGistNewWindow",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "base@3"
         },
         {
-          "command": "gistpad.copyGistUrl",
+          "command": "davepad.copyGistUrl",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "browse@1"
         },
         {
-          "command": "gistpad.copyGistPadUrl",
+          "command": "davepad.copyGistPadUrl",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "browse@2"
         },
         {
-          "command": "gistpad.openGistInBrowser",
+          "command": "davepad.openGistInBrowser",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "browse@3"
         },
         {
-          "command": "gistpad.exportGistToCodePen",
+          "command": "davepad.exportGistToCodePen",
           "when": "viewItem =~ /^gists.gist.swing$/",
           "group": "browse@4"
         },
         {
-          "command": "gistpad.openGistInBlocks",
+          "command": "davepad.openGistInBlocks",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist.swing.block$/",
           "group": "browse@4"
         },
         {
-          "command": "gistpad.openGistInGistLog",
+          "command": "davepad.openGistInGistLog",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist$/",
           "group": "browse@4"
         },
         {
-          "command": "gistpad.openGistInNbViewer",
+          "command": "davepad.openGistInNbViewer",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist.notebook$/",
           "group": "browse@4"
         },
         {
-          "command": "gistpad.duplicateGist",
+          "command": "davepad.duplicateGist",
           "when": "viewItem =~ /^gists.gist/",
           "group": "copy@1"
         },
         {
-          "command": "gistpad.forkGist",
+          "command": "davepad.forkGist",
           "when": "viewItem =~ /^(starredGists|followedUser).gist/",
           "group": "copy@1"
         },
         {
-          "command": "gistpad.cloneRepository",
+          "command": "davepad.cloneRepository",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "copy@2"
         },
         {
-          "command": "gistpad.exportToRepo",
+          "command": "davepad.exportToRepo",
           "when": "viewItem =~ /^gists.gist/",
           "group": "copy@3"
         },
         {
-          "command": "gistpad.addFile",
+          "command": "davepad.addFile",
           "when": "viewItem =~ /^gists.gist/",
           "group": "manage@1"
         },
         {
-          "command": "gistpad.uploadFileToGist",
+          "command": "davepad.uploadFileToGist",
           "when": "viewItem =~ /^gists.gist/",
           "group": "manage@2"
         },
         {
-          "command": "gistpad.changeGistDescription",
+          "command": "davepad.changeGistDescription",
           "when": "viewItem =~ /^gists.gist/",
           "group": "manage@3"
         },
         {
-          "command": "gistpad.deleteGist",
+          "command": "davepad.deleteGist",
           "when": "viewItem =~ /^gists.gist/",
           "group": "manage@4"
         },
         {
-          "command": "gistpad.viewForks",
+          "command": "davepad.viewForks",
           "when": "viewItem =~ /^(gists|starredGists|followedUser).gist/",
           "group": "star@1"
         },
         {
-          "command": "gistpad.starGist",
+          "command": "davepad.starGist",
           "when": "viewItem =~ /^(gists|followedUser).gist/",
           "group": "star@2"
         },
         {
-          "command": "gistpad.unstarGist",
+          "command": "davepad.unstarGist",
           "when": "viewItem =~ /^starredGists.gist/",
           "group": "star@2"
         },
         {
-          "command": "gistpad.unfollowUser",
+          "command": "davepad.unfollowUser",
           "when": "viewItem == followedUserGists",
           "group": "base@1"
         },
         {
-          "command": "gistpad.copyFileUrl",
+          "command": "davepad.copyFileUrl",
           "when": "viewItem =~ /^gistFile/",
           "group": "base@1"
         },
         {
-          "command": "gistpad.copyFileContents",
+          "command": "davepad.copyFileContents",
           "when": "viewItem =~ /^gistFile/",
           "group": "base@2"
         },
         {
-          "command": "gistpad.addFileToGist",
+          "command": "davepad.addFileToGist",
           "when": "viewItem =~ /^gistFile/",
           "group": "base@3"
         },
         {
-          "command": "gistpad.renameFile",
+          "command": "davepad.renameFile",
           "when": "viewItem == gistFile.editable",
           "group": "manage@1"
         },
         {
-          "command": "gistpad.duplicateFile",
+          "command": "davepad.duplicateFile",
           "when": "viewItem == gistFile.editable",
           "group": "manage@2"
         },
         {
-          "command": "gistpad.deleteFile",
+          "command": "davepad.deleteFile",
           "when": "viewItem == gistFile.editable",
           "group": "manage@3"
         },
         {
-          "command": "gistpad.addDirectoryFile",
+          "command": "davepad.addDirectoryFile",
           "when": "viewItem == gistDirectory.editable",
           "group": "manage@1"
         },
         {
-          "command": "gistpad.uploadFileToDirectory",
+          "command": "davepad.uploadFileToDirectory",
           "when": "viewItem == gistDirectory.editable",
           "group": "manage@2"
         },
         {
-          "command": "gistpad.renameDirectory",
+          "command": "davepad.renameDirectory",
           "when": "viewItem == gistDirectory.editable",
           "group": "mutate@1"
         },
         {
-          "command": "gistpad.duplicateDirectory",
+          "command": "davepad.duplicateDirectory",
           "when": "viewItem == gistDirectory.editable",
           "group": "mutate@2"
         },
         {
-          "command": "gistpad.deleteDirectory",
+          "command": "davepad.deleteDirectory",
           "when": "viewItem == gistDirectory.editable",
           "group": "mutate@3"
         },
         {
-          "command": "gistpad.newScratchNote",
+          "command": "davepad.newScratchNote",
           "when": "viewItem == scratchGist",
           "group": "inline@1"
         },
         {
-          "command": "gistpad.newScratchNote",
+          "command": "davepad.newScratchNote",
           "when": "viewItem == scratchGist",
           "group": "base@1"
         },
         {
-          "command": "gistpad.clearScratchNotes",
+          "command": "davepad.clearScratchNotes",
           "when": "viewItem == scratchGist",
           "group": "manage@1"
         },
         {
-          "command": "gistpad.hideScratchNotes",
+          "command": "davepad.hideScratchNotes",
           "when": "viewItem == scratchGist",
           "group": "manage@2"
         },
         {
-          "command": "gistpad.copyRepositoryUrl",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
+          "command": "davepad.copyRepositoryUrl",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
           "group": "browse@1"
         },
         {
-          "command": "gistpad.openRepositoryInBrowser",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
+          "command": "davepad.openRepositoryInBrowser",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
           "group": "browse@2"
         },
         {
-          "command": "gistpad.openRepositorySwing",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.swing$/",
+          "command": "davepad.openRepositorySwing",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.swing$/",
           "group": "browse@3"
         },
         {
-          "command": "gistpad.addRepositoryFile",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|swing)(.branch|Directory)?(.hasTours)?$/",
+          "command": "davepad.addRepositoryFile",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|swing)(.branch|Directory)?(.hasTours)?$/",
           "group": "inline@1"
         },
         {
-          "command": "gistpad.openTodayPage",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.wiki$/",
+          "command": "davepad.openTodayPage",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.wiki$/",
           "group": "inline@1"
         },
         {
-          "command": "gistpad.openRepositorySwing",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.swing$/",
+          "command": "davepad.openRepositorySwing",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.swing$/",
           "group": "inline@1"
         },
         {
-          "command": "gistpad.addWikiPage",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.wiki(Directory)?$/",
+          "command": "davepad.addWikiPage",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.wiki(Directory)?$/",
           "group": "inline@2"
         },
         {
-          "command": "gistpad.openTodayPage",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.wiki$/",
+          "command": "davepad.openTodayPage",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.wiki$/",
           "group": "basic@1"
         },
         {
-          "command": "gistpad.addWikiPage",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.wiki(Directory)?$/",
+          "command": "davepad.addWikiPage",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.wiki(Directory)?$/",
           "group": "basic@2"
         },
         {
-          "command": "gistpad.addRepositoryFile",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)(.branch|Directory)?(.hasTours)?$/",
+          "command": "davepad.addRepositoryFile",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)(.branch|Directory)?(.hasTours)?$/",
           "group": "manage@1"
         },
         {
-          "command": "gistpad.uploadRepositoryFile",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)(.branch|Directory)?(.hasTours)?$/",
+          "command": "davepad.uploadRepositoryFile",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)(.branch|Directory)?(.hasTours)?$/",
           "group": "manage@2"
         },
         {
-          "command": "gistpad.cloneManagedRepository",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
+          "command": "davepad.cloneManagedRepository",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
           "group": "manage@3"
         },
         {
-          "command": "gistpad.switchRepositoryBranch",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.repo(.branch)?(.hasTours)?$/",
+          "command": "davepad.switchRepositoryBranch",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.repo(.branch)?(.hasTours)?$/",
           "group": "manageBranch@1"
         },
         {
-          "command": "gistpad.mergeRepositoryBranch",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.repo.branch(.hasTours)?$/",
+          "command": "davepad.mergeRepositoryBranch",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.repo.branch(.hasTours)?$/",
           "group": "manageBranch@2"
         },
         {
-          "command": "gistpad.deleteRepositoryBranch",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.repo.branch(.hasTours)?$/",
+          "command": "davepad.deleteRepositoryBranch",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.repo.branch(.hasTours)?$/",
           "group": "manageBranch@3"
         },
         {
-          "command": "gistpad.startRepoCodeTour",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.repo(.branch)?.hasTours$/",
+          "command": "davepad.startRepoCodeTour",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.repo(.branch)?.hasTours$/",
           "group": "tour@1"
         },
         {
-          "command": "gistpad.recordRepoCodeTour",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.repo(.branch)?(.hasTours)?$/",
+          "command": "davepad.recordRepoCodeTour",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.repo(.branch)?(.hasTours)?$/",
           "group": "tour@2"
         },
         {
-          "command": "gistpad.closeRepository",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
+          "command": "davepad.closeRepository",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
           "group": "unmanage@1"
         },
         {
-          "command": "gistpad.deleteRepository",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
+          "command": "davepad.deleteRepository",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)(.branch)?(.hasTours)?$/",
           "group": "unmanage@2"
         },
         {
-          "command": "gistpad.copyRepositoryFileUrl",
-          "when": "view == gistpad.repos && viewItem == gistpad.repoFile",
+          "command": "davepad.copyRepositoryFileUrl",
+          "when": "view == davepad.repos && viewItem == davepad.repoFile",
           "group": "browse@1"
         },
         {
-          "command": "gistpad.openRepositoryFileInBrowser",
-          "when": "view == gistpad.repos && viewItem == gistpad.repoFile",
+          "command": "davepad.openRepositoryFileInBrowser",
+          "when": "view == davepad.repos && viewItem == davepad.repoFile",
           "group": "browse@2"
         },
         {
-          "command": "gistpad.renameRepositoryFile",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)File$/",
+          "command": "davepad.renameRepositoryFile",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)File$/",
           "group": "manage@1"
         },
         {
-          "command": "gistpad.duplicateRepositoryFile",
-          "when": "view == gistpad.repos && viewItem == gistpad.repoFile",
+          "command": "davepad.duplicateRepositoryFile",
+          "when": "view == davepad.repos && viewItem == davepad.repoFile",
           "group": "manage@2"
         },
         {
-          "command": "gistpad.deleteRepositoryFile",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)File$/",
+          "command": "davepad.deleteRepositoryFile",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)File$/",
           "group": "manage@3"
         },
         {
-          "command": "gistpad.renameRepositoryDirectory",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)Directory$/",
+          "command": "davepad.renameRepositoryDirectory",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)Directory$/",
           "group": "mutate@1"
         },
         {
-          "command": "gistpad.deleteRepositoryDirectory",
-          "when": "view == gistpad.repos && viewItem =~ /^gistpad.(repo|wiki|swing)Directory$/",
+          "command": "davepad.deleteRepositoryDirectory",
+          "when": "view == davepad.repos && viewItem =~ /^davepad.(repo|wiki|swing)Directory$/",
           "group": "mutate@2"
         },
         {
-          "command": "gistpad.exportTour",
+          "command": "davepad.exportTour",
           "when": "viewItem =~ /^codetour.tour(.active)?$/",
           "group": "export@2"
         }
       ],
       "explorer/context": [
         {
-          "command": "gistpad.addFileToGist",
+          "command": "davepad.addFileToGist",
           "when": "!explorerResourceIsFolder"
         }
       ],
       "editor/context": [
         {
-          "command": "gistpad.addSelectionToGist"
+          "command": "davepad.addSelectionToGist"
         },
         {
-          "command": "gistpad.pasteGistFile"
+          "command": "davepad.pasteGistFile"
         },
         {
-          "command": "gistpad.pasteImage",
+          "command": "davepad.pasteImage",
           "when": "resourceScheme == repo && resourceLangId == markdown"
         },
         {
-          "command": "gistpad.pasteImage",
+          "command": "davepad.pasteImage",
           "when": "resourceScheme == gist && resourceLangId == markdown"
         },
         {
-          "command": "gistpad.pasteImage",
+          "command": "davepad.pasteImage",
           "when": "resourceScheme == gist && resourceLangId == html"
         },
         {
-          "command": "gistpad.pasteImage",
+          "command": "davepad.pasteImage",
           "when": "resourceScheme == gist && resourceLangId == jade"
         }
       ],
       "editor/title": [
         {
-          "command": "gistpad.renameFile",
+          "command": "davepad.renameFile",
           "when": "resourceScheme == gist"
         },
         {
-          "command": "gistpad.deleteFile",
+          "command": "davepad.deleteFile",
           "when": "resourceScheme == gist"
         },
         {
-          "command": "gistpad.renameRepositoryFile",
+          "command": "davepad.renameRepositoryFile",
           "when": "resourceScheme == repo"
         }
       ],
       "editor/title/context": [
         {
-          "command": "gistpad.addFileToGist"
+          "command": "davepad.addFileToGist"
         },
         {
-          "command": "gistpad.copyFileUrl",
+          "command": "davepad.copyFileUrl",
           "when": "resourceScheme == gist"
         },
         {
-          "command": "gistpad.copyRepositoryFileUrl",
+          "command": "davepad.copyRepositoryFileUrl",
           "when": "resourceScheme == repo"
         }
       ],
       "comments/comment/title": [
         {
-          "command": "gistpad.editGistComment",
+          "command": "davepad.editGistComment",
           "group": "group@1",
-          "when": "commentController == gistpad && comment == canEdit"
+          "when": "commentController == davepad && comment == canEdit"
         },
         {
-          "command": "gistpad.deleteGistComment",
+          "command": "davepad.deleteGistComment",
           "group": "group@2",
-          "when": "commentController == gistpad && comment == canEdit"
+          "when": "commentController == davepad && comment == canEdit"
         },
         {
-          "command": "gistpad.editRepositoryComment",
+          "command": "davepad.editRepositoryComment",
           "group": "group@1",
-          "when": "commentController == gistpad:repo && comment == canEdit"
+          "when": "commentController == davepad:repo && comment == canEdit"
         },
         {
-          "command": "gistpad.deleteRepositoryComment",
+          "command": "davepad.deleteRepositoryComment",
           "group": "group@2",
-          "when": "commentController == gistpad:repo && comment == canEdit"
+          "when": "commentController == davepad:repo && comment == canEdit"
         }
       ],
       "comments/comment/context": [
         {
-          "command": "gistpad.saveGistComment",
+          "command": "davepad.saveGistComment",
           "group": "inline@2",
-          "when": "commentController == gistpad"
+          "when": "commentController == davepad"
         },
         {
-          "command": "gistpad.saveRepositoryComment",
+          "command": "davepad.saveRepositoryComment",
           "group": "inline@2",
-          "when": "commentController == gistpad:repo"
+          "when": "commentController == davepad:repo"
         }
       ],
       "comments/commentThread/context": [
         {
-          "command": "gistpad.addGistComment",
+          "command": "davepad.addGistComment",
           "group": "inline",
-          "when": "commentController == gistpad && commentThreadIsEmpty && gistpad:state == SignedIn"
+          "when": "commentController == davepad && commentThreadIsEmpty && davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.replyGistComment",
+          "command": "davepad.replyGistComment",
           "group": "inline",
-          "when": "commentController == gistpad && !commentThreadIsEmpty && gistpad:state == SignedIn"
+          "when": "commentController == davepad && !commentThreadIsEmpty && davepad:state == SignedIn"
         },
         {
-          "command": "gistpad.addRepositoryComment",
+          "command": "davepad.addRepositoryComment",
           "group": "inline",
-          "when": "commentController == gistpad:repo && commentThreadIsEmpty && gistpad:state == SignedIn"
+          "when": "commentController == davepad:repo && commentThreadIsEmpty && davepad:state == SignedIn"
         }
       ],
       "notebook/toolbar": [
         {
-          "command": "gistpad.addFileToGist"
+          "command": "davepad.addFileToGist"
         }
       ]
     },
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "gistpad",
+          "id": "davepad",
           "title": "GistPad",
           "icon": "images/icon-activity.svg"
         }
       ]
     },
     "views": {
-      "gistpad": [
+      "davepad": [
         {
-          "id": "gistpad.gists",
+          "id": "davepad.gists",
           "name": "Gists"
         },
         {
-          "id": "gistpad.repos",
+          "id": "davepad.repos",
           "name": "Repositories"
         },
         {
-          "id": "gistpad.showcase",
+          "id": "davepad.showcase",
           "name": "Showcase",
           "visibility": "hidden",
-          "when": "gistpad:state == SignedIn"
+          "when": "davepad:state == SignedIn"
         }
       ]
     },
     "viewsWelcome": [
       {
-        "view": "gistpad.gists",
-        "contents": "Open any GitHub Gist, by either its URL or ID.\n\n[$(folder-opened) Open Gist](command:gistpad.openGist)\n\nManage your gists, by signing in with a GitHub account.\n\n[$(github-inverted) Sign In](command:gistpad.signIn)"
+        "view": "davepad.gists",
+        "contents": "Open any GitHub Gist, by either its URL or ID.\n\n[$(folder-opened) Open Gist](command:davepad.openGist)\n\nManage your gists, by signing in with a GitHub account.\n\n[$(github-inverted) Sign In](command:davepad.signIn)"
       },
       {
-        "view": "gistpad.repos",
-        "contents": "Browse GitHub repos, without needing to locally clone files ([Learn More](https://github.com/vsls-contrib/gistpad#repositories)).\n\n[$(folder-opened) Open Repository](command:gistpad.openRepository)\n\nYou can also edit your repos and wikis, by signing in with a GitHub account ([Learn More](https://github.com/vsls-contrib/gistpad#wikis)).\n\n[$(github-inverted) Sign In](command:gistpad.signIn)",
-        "when": "gistpad:state != SignedIn"
+        "view": "davepad.repos",
+        "contents": "Browse GitHub repos, without needing to locally clone files ([Learn More](https://github.com/vsls-contrib/davepad#repositories)).\n\n[$(folder-opened) Open Repository](command:davepad.openRepository)\n\nYou can also edit your repos and wikis, by signing in with a GitHub account ([Learn More](https://github.com/vsls-contrib/davepad#wikis)).\n\n[$(github-inverted) Sign In](command:davepad.signIn)",
+        "when": "davepad:state != SignedIn"
       },
       {
-        "view": "gistpad.repos",
-        "contents": "Open one of your GitHub repos in order to start remotely browsing and editing files ([Learn More](https://github.com/vsls-contrib/gistpad#repositories)).\n\n[$(folder-opened) Open Repository](command:gistpad.openRepository)",
-        "when": "gistpad:state == SignedIn"
+        "view": "davepad.repos",
+        "contents": "Open one of your GitHub repos in order to start remotely browsing and editing files ([Learn More](https://github.com/vsls-contrib/davepad#repositories)).\n\n[$(folder-opened) Open Repository](command:davepad.openRepository)",
+        "when": "davepad:state == SignedIn"
       }
     ],
     "jsonValidation": [

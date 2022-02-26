@@ -5,7 +5,7 @@ import { getTreeItemFromLink, getUriFromLink } from "./utils";
 export function extendMarkdownIt(md: any) {
   return md
     .use(require("markdown-it-regex").default, {
-      name: "gistpad-links",
+      name: "davepad-links",
       regex: /(?<!\!)(?:\[\[)([^\]]+?)(?:\]\])/,
       replace: (link: string) => {
         if (
@@ -31,7 +31,7 @@ export function extendMarkdownIt(md: any) {
       }
     })
     .use(require("markdown-it-regex").default, {
-      name: "gistpad-embeds",
+      name: "davepad-embeds",
       regex: /(?:\!\[\[)([^\]]+?)(?:\]\])/,
       replace: (link: string) => {
         if (

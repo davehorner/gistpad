@@ -158,7 +158,7 @@ In addition to creating a new repo "from scratch", you can also create a reposit
 
 ### Branches
 
-By default, when you create/manage a repository, GistPad will assume you're interested in editing the `master` branch. However, when managing a repo, you can specify a different branch by appending `#<branch>` to the specified repo name (e.g. `vsls-contrib/gistpad#featureA`). When you're managing a non-master branch, the repo node in the `Repositories` tree will display the branch name.
+By default, when you create/manage a repository, GistPad will assume you're interested in editing the `master` branch. However, when managing a repo, you can specify a different branch by appending `#<branch>` to the specified repo name (e.g. `vsls-contrib/davepad#featureA`). When you're managing a non-master branch, the repo node in the `Repositories` tree will display the branch name.
 
 If at any time, you want to switch branches, simply right-click the repo node in the `Repositories` tree and select `Switch Branch`. This will let you pick one of the repo's remote branches, as well as create a new branch. When you're done with a branch, simply right-click the repo and select either `Delete Branch` or `Merge Branch`. The later will perform a "squash merge" against `master`. Using branches allows you to "batch" change sets together, and then apply them in a single/semantic commit.
 
@@ -172,8 +172,8 @@ By default, when you paste an image into a repo file, it's uploaded as a `.png` 
 
 By default, when you create/manage a GitHub repository, GistPad will let you edit it like a remotely-accessible "file system". However, if you'd like to use the repo as a Roam/Obsidian-like wiki, that's composed of bi-directionally linked markdown pages, then you can indicate that the repo is a wiki in one of the following ways:
 
-1. Including `wiki` in the repo's name (e.g. `lostintangent/gistpad-wiki`)
-1. Adding a `gistpad.json` or `.vscode/gistpad.json` file to the repo itself
+1. Including `wiki` in the repo's name (e.g. `lostintangent/davepad-wiki`)
+1. Adding a `davepad.json` or `.vscode/davepad.json` file to the repo itself
 
 <img width="250px" src="https://user-images.githubusercontent.com/116461/87234704-83a7c400-c388-11ea-90a8-2a660bef4dc5.png" />
 

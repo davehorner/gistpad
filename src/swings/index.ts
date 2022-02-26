@@ -80,7 +80,7 @@ export async function registerCodeSwingModule(
 
   vscode.commands.executeCommand(
     "setContext",
-    "gistpad:codeSwingEnabled",
+    "davepad:codeSwingEnabled",
     true
   );
 

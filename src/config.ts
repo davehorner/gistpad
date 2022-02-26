@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 
-const CONFIG_SECTION = "gistpad";
+const CONFIG_SECTION = "davepad";
 
 export function get(key: "treeIcons"): boolean;
 export function get(key: "images.markdownPasteFormat"): "markdown" | "html";

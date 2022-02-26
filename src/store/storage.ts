@@ -4,11 +4,11 @@ import { GroupType, SortOrder, store } from ".";
 import * as config from "../config";
 import { EXTENSION_NAME } from "../constants";
 
-const FOLLOW_KEY = "gistpad.followedUsers";
+const FOLLOW_KEY = "davepad.followedUsers";
 
 // TODO: Replace these with user settings
-const SORT_ORDER_KEY = "gistpad:sortOrder";
-const GROUP_TYPE_KEY = "gistpad:groupType";
+const SORT_ORDER_KEY = "davepad:sortOrder";
+const GROUP_TYPE_KEY = "davepad:groupType";
 
 const SHOW_SCRATCH_NOTES_KEY = "scratchNotes.show";
 

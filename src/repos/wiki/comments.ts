@@ -58,7 +58,7 @@ export class WikiBacklinksComments implements Comment {
     this.author = {
       name: "GistPad (Backlinks)",
       iconPath: Uri.parse(
-        "https://cdn.jsdelivr.net/gh/vsls-contrib/gistpad/images/icon.png"
+        "https://cdn.jsdelivr.net/gh/vsls-contrib/davepad/images/icon.png"
       )
     };
   }
@@ -81,7 +81,7 @@ export function registerCommentController() {
       return;
     }
 
-    controller = comments.createCommentController("gistpad.wiki", "Backlinks");
+    controller = comments.createCommentController("davepad.wiki", "Backlinks");
     const comment = new WikiBacklinksComments(info[1].backLinks);
     const thread = controller.createCommentThread(
       e.document.uri,

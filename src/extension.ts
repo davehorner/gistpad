@@ -26,7 +26,7 @@ export async function activate(context: vscode.ExtensionContext) {
   registerCodeSwingModule(context);
   registerShowcaseModule(context);
 
-  const keysForSync = ["followedUsers", "repos"].map((key) => `gistpad.${key}`);
+  const keysForSync = ["followedUsers", "repos"].map((key) => `davepad.${key}`);
   context.globalState.setKeysForSync(keysForSync);
 
   return {

@@ -4,17 +4,17 @@ import { store } from "../store";
 
 export function registerStatusBar() {
   const openTodayPageStatusBarItem = window.createStatusBarItem();
-  openTodayPageStatusBarItem.command = "gistpad.openTodayPage";
+  openTodayPageStatusBarItem.command = "davepad.openTodayPage";
   openTodayPageStatusBarItem.text = "$(calendar)";
 
   const addWikiPageStatusBarItem = window.createStatusBarItem();
-  addWikiPageStatusBarItem.command = "gistpad.addWikiPage";
+  addWikiPageStatusBarItem.command = "davepad.addWikiPage";
   addWikiPageStatusBarItem.text = "$(notebook)";
 
   reaction(
     () => [store.wiki],
     () => {
-      commands.executeCommand("setContext", "gistpad:hasWiki", !!store.wiki);
+      commands.executeCommand("setContext", "davepad:hasWiki", !!store.wiki);
 
       if (store.wiki) {
         openTodayPageStatusBarItem.tooltip = `GistPad: Open today page (${store.wiki.fullName})`;

@@ -172,7 +172,7 @@ export class GistFileNode extends TreeNode {
     );
 
     this.command = {
-      command: "gistpad.openGistFile",
+      command: "davepad.openGistFile",
       title: "Open Gist File",
       arguments: [this.resourceUri]
     };
